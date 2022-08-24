@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](https://github.com/ahmedps8/second-project/blob/main/design/second%20project.png?raw=true)
+![Screenshot](https://github.com/ahmedps8/third-project/blob/main/design/my%20design.png?raw=true)
 
 
 
