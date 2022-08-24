@@ -1,0 +1,137 @@
+:root {
+    --Mobile: 375px;
+    --Desktop: 1440px;
+    
+         /* ## Colors */
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+         /* font */
+    --Font-Body-size: 13px;
+    --font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+body {
+    font-size: var(--Font-Body-size);
+}
+
+
+.container {
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    gap: 25px;
+}
+
+.container div {
+    padding: 35px;
+    padding-top: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 25px grey;
+    position: relative;
+}
+
+.daniel {
+    background-color: var( --Moderate-violet);
+    color: var(--Light-grayish-blue);
+    z-index: 1;
+}
+.jonathan {
+    background-color: var(--Very-dark-grayish-blue);
+    color: var(--Light-grayish-blue);
+}
+.Jeanette {
+    background-color: var(--White);
+
+}
+.kira {
+    background-color: var(--White);
+}
+
+.kira h3, .Jeanette h3 {
+    color: var(--Very-dark-grayish-blue);
+}
+
+.patrick {
+    background-color: var(--Very-dark-blackish-blue);
+    color: var(--Light-grayish-blue);
+}
+
+h3:first-of-type {
+    padding-left: 35px;
+
+}
+h4:first-of-type {
+    padding-left: 35px;
+    margin-top: -15px;
+    opacity: 0.5;
+}
+
+.container p {
+    opacity: 0.7;
+}
+
+img:first-of-type {
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    left: 27px;
+    top: 32px;
+
+}
+
+.quote {
+    display: grid;
+    position: absolute;
+    right:15px;
+    top: 5px;
+    width: 100px;
+    z-index: -1;
+}
+
+@media (min-width:1440px) {
+    .container {
+        margin-top: 150px;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4,1fr);
+        width: 1200px;
+        height: 400px;
+    }
+    .daniel {
+        grid-area: 1 / 1 / span 1 / span 2;
+    }
+    .kira {
+        order: 1;
+        grid-row: 1 / span 2;
+        grid-column: 4/ span 2;
+    }
+    .patrick {
+        order: 3;
+        grid-column: 2/ span 2;
+    }
+    .Jeanette {
+        order: 2;
+    }
+    h3:nth-of-type(2)  {
+        font-size: 20px;
+    }
+    p {
+        line-height: 1.3rem;
+    }
+    .attribution {
+        position: absolute;
+        margin: 0 auto;
+        bottom: 2%;
+        left: 45%;
+    }
+    
+}
